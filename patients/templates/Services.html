@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<main class="main">
+
+ <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>From our 18 dedicated departments,we provide the following services </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>General Medicine and Primary Care</h3>
+              </a>
+              <p>Providing comprehensive diagnosis, treatment, and preventive care for common illnesses and chronic conditions. Our experienced general practitioners ensure personalized and holistic healthcare for all ages.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-pills"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Pediatrics</h3>
+              </a>
+              <p>Specialised medical care for infants,children and adolescents.From routine check-ups and vaccinations to treating complex pediatric conditions,our dedicated team ensures your children's health and well-being</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-hospital-user"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Maternity and Obstetrics Services</h3>
+              </a>
+              <p>Offering a full range of care for expectant mothers,from prenatal checkups to labor and delivery.Our maternity unit is equipped with modern facilities for a safe and comfortable birthing experience </p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-dna"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Surgical Services</h3>
+              </a>
+              <p>Equipped with various operating theatres and skilled surgeons,we perform a wide array of procedures including general,orthopedic and minimally invasive surgeries</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-wheelchair"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Diagnostic and Imaging Services</h3>
+              </a>
+              <p>State-of-the-art laboratory and imaging services,including x-rays,MRIs,CT scans and blood tests,ensuring accurate and timely diagnosis to guide treatment</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-notes-medical"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Emergency and Critical Care</h3>
+              </a>
+              <p>24/7 emergency services with highly trained staff and advaanced equipment to handle medical emergencies,trauma and critical conditions promptly.</p>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="appointment section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Book An Appointment</h2>
+        <p>Make an online appointment which is guaranteed of safety and attention with immediate response</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+<!--         automatically displays or renders form fields as <p> tags-->
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
+          </form>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Appointment Section -->
+
+
+     <!-- Faq Section -->
+    <section id="faq" class="faq section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+        <p>Below are the frequently asked questions by our hospital visitors and patients,hoping you will get answered.You can also inquire more through the contact's section form.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>What are the hospitals visiting hours?</h3>
+                <div class="faq-content">
+                  <p>: Visiting hours are from [insert time, e.g., 8:00 AM to 8:00 PM] daily. However, special considerations may apply for critical care units. Please check with the specific department..</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Where is Afya Center located,and how can i get there?</h3>
+                <div class="faq-content">
+                  <p>Afya Center is located along Ziwa La Ngombe Road opposite Kisimani Tower. We are easily accessible via public transport and have ample parking facilities for visitors..</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can family members stay with patients overnight?</h3>
+                <div class="faq-content">
+                  <p>  Yes, in most cases. For private rooms, one family member can stay overnight. However, this policy may vary depending on the patient’s condition and hospital guidelines.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Do i need a referral to see a specialist?</h3>
+                <div class="faq-content">
+                  <p> A referral may be required for some specialists. Please contact us or consult your primary care physician for guidance.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can i schedule a telehealth appointment?</h3>
+                <div class="faq-content">
+                  <p>Yes, we offer telehealth services for non-emergency consultations. Contact us to book your virtual appointment.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How do i obtain a copy of my bill or receipt?</h3>
+                <div class="faq-content">
+                  <p> You can request a copy of your bill at the billing office or through our patient portal.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+</main>
+
+{% endblock %}
